@@ -16,5 +16,9 @@ namespace CSharp_CheatSheet.Controllers
         {
             return View();
         }
+        public IActionResult ReadingAndWritingConsole()
+        {
+            return View();
+        }
     }
 }

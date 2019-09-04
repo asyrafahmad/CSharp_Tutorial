@@ -32,3 +32,4 @@ D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.csproj.CopyComplete
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\Introduction.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Menu\Index.g.cshtml.cs
+D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\ReadingAndWritingConsole.g.cshtml.cs
