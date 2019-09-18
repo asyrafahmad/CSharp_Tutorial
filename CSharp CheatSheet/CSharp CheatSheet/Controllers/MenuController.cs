@@ -12,5 +12,10 @@ namespace CSharp_CheatSheet.Controllers
         {
             return View();
         }
+
+        //public JsonResult View()
+        //{
+        //    return View();
+        //}
     }
 }
