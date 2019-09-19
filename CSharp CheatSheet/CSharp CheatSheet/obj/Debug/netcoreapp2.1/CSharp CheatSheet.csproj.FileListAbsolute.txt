@@ -5,7 +5,6 @@ D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\bin\Debug\netcoreapp
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\bin\Debug\netcoreapp2.1\CSharp CheatSheet.pdb
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\bin\Debug\netcoreapp2.1\CSharp CheatSheet.Views.dll
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\bin\Debug\netcoreapp2.1\CSharp CheatSheet.Views.pdb
-D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.csprojAssemblyReference.cache
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.csproj.CoreCompileInputs.cache
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.RazorAssemblyInfo.cache
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.RazorAssemblyInfo.cs
@@ -18,10 +17,13 @@ D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Menu\Index.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\Introduction.g.cshtml.cs
+D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\ReadingAndWritingConsole.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.RazorTargetAssemblyInfo.cache
@@ -30,6 +32,3 @@ D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.dll
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.pdb
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.csproj.CopyComplete
-D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\Introduction.g.cshtml.cs
-D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Menu\Index.g.cshtml.cs
-D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\ReadingAndWritingConsole.g.cshtml.cs
