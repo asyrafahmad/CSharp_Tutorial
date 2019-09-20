@@ -20,7 +20,7 @@ namespace CSharp_CheatSheet.Controllers
 
         private async Task<ListVideos> GetVidsAsync()
         {
-            var res = new ListVideos();
+            var res = new ListVideos();         
             var result = new YoutubeResult();
             try
             {                
@@ -52,15 +52,11 @@ namespace CSharp_CheatSheet.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             return res;
         }
 
-        //public JsonResult View()
-        //{
-        //    return View();
-        //}
+     
     }
 }

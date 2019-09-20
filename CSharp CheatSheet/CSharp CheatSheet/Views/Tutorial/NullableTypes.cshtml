@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "NullableTypes";
+}
+
+<h2>NullableTypes</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">NullableTypes</div>
+    <div class="panel-body">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HuLJbiqpIM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>Code</div>
+        <figure class="highlight">
+            <pre><code><span>
+                static void Main()
+                {
+                    bool? AreYouMajor = null;
+
+                    if (AreYouMajor == true)
+                    {
+                    Console.WriteLine("User is major");
+                    }
+                    else if (AreYouMajor == false)
+                    {
+                    Console.WriteLine("User is not Major");
+                    }
+                    else
+                    {
+                    Console.WriteLine("User did not answer the question");
+                }
+            </span></code></pre>
+        </figure>
+        <div>Output: </div>
+        User is Major
+        <br /><br />
+        <div>Code</div>
+        <figure class="highlight">
+            <pre><code><span>
+                static void Main()
+                {
+                    int? TicketsOnSale = null;
+                    
+                    int AvailableTickets;
+
+                    if(TicketsOnSale == null)
+                    {
+                        AvailableTickets = 0;
+                    }
+                    else
+                    {
+                        AvailableTickets = (int)TicketsOnSale;
+                    }
+                Console.WriteLine("AvailableTickets = {0}", AvailableTickets);
+                }
+            </span></code></pre>
+        </figure>
+        <div>Output: </div>
+        AvailableTickets = 0
+    </div>
+</div>
+</div>

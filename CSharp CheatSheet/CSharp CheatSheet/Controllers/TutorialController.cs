@@ -20,5 +20,37 @@ namespace CSharp_CheatSheet.Controllers
         {
             return View();
         }
+        public IActionResult Built()
+        {
+            return View();
+        }
+        public IActionResult StringType()
+        {
+            return View();
+        }
+        public IActionResult CommonOperator()
+        {
+            return View();
+        }
+        public IActionResult NullableTypes()
+        {
+            return View();
+        }
+        public IActionResult DatatypesConversion()
+        {
+            return View();
+        }
+        public IActionResult Arrays()
+        {
+            return View();
+        }
+        public IActionResult Comments()
+        {
+            return View();
+        }
+        public IActionResult IfStatement()
+        {
+            return View();
+        }
     }
 }
