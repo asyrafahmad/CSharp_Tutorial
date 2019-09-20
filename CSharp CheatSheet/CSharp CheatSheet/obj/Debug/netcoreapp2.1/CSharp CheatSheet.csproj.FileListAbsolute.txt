@@ -37,7 +37,6 @@ D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\NullableTypes.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\DatatypesConversion.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\StringType.g.cshtml.cs
-D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\CSharp CheatSheet.csprojAssemblyReference.cache
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\Arrays.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\Comments.g.cshtml.cs
 D:\Sapura\C# CheatSheet\CSharp CheatSheet\CSharp CheatSheet\obj\Debug\netcoreapp2.1\Razor\Views\Tutorial\IfStatement.g.cshtml.cs

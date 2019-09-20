@@ -13,7 +13,7 @@
 
 
             <h3>@item.Title</h3><p>
-                @item.Description
+                @Html.Raw(item.Description.Substring(0,100))
             </p><p><a href="~/Tutorial/Introduction?v=@item.Id" class="btn btn-primary" role="button">Learn more</a><a href="#" class="btn btn-default" role="button">Add Favourite</a></p>
         </div>
     </div>
