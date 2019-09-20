@@ -104,7 +104,7 @@ WriteAttributeValue("", 1369, item.Id, 1369, 8, false);
             WriteLiteral("\r\n            </p><p>");
             EndContext();
             BeginContext(1624, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4ebac7bfa3f40d4bef8e9b4516a5ae9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "22e98e79b7cb42d09df1ad283e2a0366", async() => {
                 BeginContext(1707, 10, true);
                 WriteLiteral("Learn more");
                 EndContext();
