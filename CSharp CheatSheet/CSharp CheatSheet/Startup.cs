@@ -18,11 +18,9 @@ namespace CSharp_CheatSheet
 {
     public class Startup
     {
-        private VideoAPI _video;    //to call API just for once
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            _video = new VideoAPI();    //to call API just for once
         }
 
         public IConfiguration Configuration { get; }
@@ -40,7 +38,7 @@ namespace CSharp_CheatSheet
 
         //    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         //}
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services,)
 
         {
 
@@ -49,7 +47,7 @@ namespace CSharp_CheatSheet
             var connection = @"Server=(localdb)\mssqllocaldb;Database=myWebApp;Trusted_Connection=True;";
 
             services.AddDbContext<myWebApp_Context>(options => options.UseSqlServer(connection));
-
+            var _video = new VideoAPI();
             _video.Initialize();    //to call API just for once
         }
 

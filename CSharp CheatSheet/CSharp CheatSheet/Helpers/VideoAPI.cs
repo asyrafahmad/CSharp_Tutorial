@@ -10,7 +10,7 @@ namespace CSharp_CheatSheet.Helpers
 {
     public class VideoAPI
     {
-        private myWebApp_Context _db;
+        private myWebApp_Context _db = new myWebApp_Context();
         static HttpClient client = new HttpClient();
 
         public VideoAPI()
