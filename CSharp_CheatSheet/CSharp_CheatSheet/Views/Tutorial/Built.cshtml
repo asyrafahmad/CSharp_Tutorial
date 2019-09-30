@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Built";
+}
+
+<h2>Built</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Built</div>
+    <div class="panel-body">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/y3k5d6xub-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div><br />
+        <div>Code</div>
+        <figure class="highlight">
+            <pre><code><span>
+                static void Main()
+                {
+                    int i = 0;
+
+                    Console.WriteLine("Min = {0} " + int.MinValue);
+                    Console.WriteLine("Max = {1} " + int.MaxValue);
+
+                    double d = 123.22242433;
+
+                    Console.WriteLine(d);
+                }
+            </span></code></pre>
+        </figure>
+        <div>Output: </div>
+        Min = -2147483648<br />
+        Max = 2147483647
+        <br /><br />
+        <div>Code</div>
+        <figure class="highlight">
+            <pre><code><span>
+                static void Main()
+                {
+                    double d = 123.22242433;
+
+                    Console.WriteLine(d);
+                }
+            </span></code></pre>
+        </figure>
+        <div>Output: </div>
+        @*<textarea rows="10" cols="100%">
+        123.22242433
+                </textarea>*@
+        123.22242433
+    </div>
+</div>
