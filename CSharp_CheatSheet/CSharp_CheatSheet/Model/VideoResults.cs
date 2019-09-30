@@ -7,14 +7,14 @@ namespace CSharp_CheatSheet.Model
     {
         public VideoResults()
         {
-            VideoItems = new HashSet<VideoItems>();
+            videoItems = new HashSet<videoItems>();
         }
 
-        public string Kind { get; set; }
-        public string Etag { get; set; }
-        public int? PageInfototalResults { get; set; }
+        public string kind { get; set; }
+        public string etag { get; set; }
+        public int? pageInfototalResults { get; set; }
 
-        public PageInfo PageInfototalResultsNavigation { get; set; }
-        public ICollection<VideoItems> VideoItems { get; set; }
+        public pageInfo pageInfototalResultsNavigation { get; set; }
+        public ICollection<videoItems> videoItems { get; set; }
     }
 }

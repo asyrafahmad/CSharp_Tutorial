@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace CSharp_CheatSheet.Model
 {
-    public partial class ContentDetails
+    public partial class contentDetails
     {
-        public ContentDetails()
+        public contentDetails()
         {
-            ResultItems = new HashSet<ResultItems>();
+            resultItems = new HashSet<resultItems>();
         }
 
-        public string VideoId { get; set; }
-        public DateTime VideoPublishedAt { get; set; }
+        public string videoId { get; set; }
+        public DateTime videoPublishedAt { get; set; }
 
-        public ICollection<ResultItems> ResultItems { get; set; }
+        public ICollection<resultItems> resultItems { get; set; }
     }
 }

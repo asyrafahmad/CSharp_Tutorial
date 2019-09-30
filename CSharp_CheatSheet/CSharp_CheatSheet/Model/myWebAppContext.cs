@@ -15,164 +15,108 @@ namespace CSharp_CheatSheet.Model
         {
         }
 
-        public virtual DbSet<ContentDetails> ContentDetails { get; set; }
-        public virtual DbSet<PageInfo> PageInfo { get; set; }
-        public virtual DbSet<ResultItems> ResultItems { get; set; }
-        public virtual DbSet<Snippet> Snippet { get; set; }
-        public virtual DbSet<VideoItems> VideoItems { get; set; }
+        public virtual DbSet<contentDetails> contentDetails { get; set; }
+        public virtual DbSet<pageInfo> pageInfo { get; set; }
+        public virtual DbSet<resultItems> resultItems { get; set; }
+        public virtual DbSet<snippet> snippet { get; set; }
+        public virtual DbSet<videoItems> videoItems { get; set; }
         public virtual DbSet<VideoResults> VideoResults { get; set; }
-        public virtual DbSet<YoutubeVideoDetails> YoutubeApiviewModels { get; set; }
+        public virtual DbSet<YoutubeAPIViewModels> YoutubeAPIViewModels { get; set; }
         public virtual DbSet<YoutubeResults> YoutubeResults { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=myWebApp;Trusted_Connection=True;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ContentDetails>(entity =>
+            modelBuilder.Entity<contentDetails>(entity =>
             {
-                entity.HasKey(e => e.VideoId);
+                entity.HasKey(e => e.videoId);
 
-                entity.ToTable("contentDetails");
-
-                entity.Property(e => e.VideoId)
-                    .HasColumnName("videoId")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.VideoPublishedAt).HasColumnName("videoPublishedAt");
+                entity.Property(e => e.videoId).ValueGeneratedNever();
             });
 
-            modelBuilder.Entity<PageInfo>(entity =>
+            modelBuilder.Entity<pageInfo>(entity =>
             {
-                entity.HasKey(e => e.TotalResults);
-
-                entity.ToTable("pageInfo");
-
-                entity.Property(e => e.TotalResults).HasColumnName("totalResults");
-
-                entity.Property(e => e.ResultsPerPage).HasColumnName("resultsPerPage");
+                entity.HasKey(e => e.totalResults);
             });
 
-            modelBuilder.Entity<ResultItems>(entity =>
+            modelBuilder.Entity<resultItems>(entity =>
             {
-                entity.ToTable("resultItems");
+                entity.HasIndex(e => e.contentDetailsvideoId);
 
-                entity.HasIndex(e => e.ContentDetailsvideoId);
+                entity.HasIndex(e => e.kind);
 
-                entity.HasIndex(e => e.Kind);
+                entity.Property(e => e.id).ValueGeneratedNever();
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                entity.HasOne(d => d.contentDetailsvideo)
+                    .WithMany(p => p.resultItems)
+                    .HasForeignKey(d => d.contentDetailsvideoId);
 
-                entity.Property(e => e.ContentDetailsvideoId).HasColumnName("contentDetailsvideoId");
-
-                entity.Property(e => e.Etag).HasColumnName("etag");
-
-                entity.Property(e => e.Kind).HasColumnName("kind");
-
-                entity.HasOne(d => d.ContentDetailsvideo)
-                    .WithMany(p => p.ResultItems)
-                    .HasForeignKey(d => d.ContentDetailsvideoId);
-
-                entity.HasOne(d => d.KindNavigation)
-                    .WithMany(p => p.ResultItems)
-                    .HasForeignKey(d => d.Kind);
+                entity.HasOne(d => d.kindNavigation)
+                    .WithMany(p => p.resultItems)
+                    .HasForeignKey(d => d.kind);
             });
 
-            modelBuilder.Entity<Snippet>(entity =>
+            modelBuilder.Entity<snippet>(entity =>
             {
-                entity.HasKey(e => e.Title);
+                entity.HasKey(e => e.title);
 
-                entity.ToTable("snippet");
-
-                entity.Property(e => e.Title)
-                    .HasColumnName("title")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.Description).HasColumnName("description");
-
-                entity.Property(e => e.PublishedAt).HasColumnName("publishedAt");
+                entity.Property(e => e.title).ValueGeneratedNever();
             });
 
-            modelBuilder.Entity<VideoItems>(entity =>
+            modelBuilder.Entity<videoItems>(entity =>
             {
-                entity.ToTable("videoItems");
+                entity.HasIndex(e => e.kind);
 
-                entity.HasIndex(e => e.Kind);
+                entity.HasIndex(e => e.snippettitle);
 
-                entity.HasIndex(e => e.Snippettitle);
+                entity.Property(e => e.id).ValueGeneratedNever();
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                entity.HasOne(d => d.kindNavigation)
+                    .WithMany(p => p.videoItems)
+                    .HasForeignKey(d => d.kind);
 
-                entity.Property(e => e.Etag).HasColumnName("etag");
-
-                entity.Property(e => e.Kind).HasColumnName("kind");
-
-                entity.Property(e => e.Snippettitle).HasColumnName("snippettitle");
-
-                entity.HasOne(d => d.KindNavigation)
-                    .WithMany(p => p.VideoItems)
-                    .HasForeignKey(d => d.Kind);
-
-                entity.HasOne(d => d.SnippettitleNavigation)
-                    .WithMany(p => p.VideoItems)
-                    .HasForeignKey(d => d.Snippettitle);
+                entity.HasOne(d => d.snippettitleNavigation)
+                    .WithMany(p => p.videoItems)
+                    .HasForeignKey(d => d.snippettitle);
             });
 
             modelBuilder.Entity<VideoResults>(entity =>
             {
-                entity.HasKey(e => e.Kind);
+                entity.HasKey(e => e.kind);
 
-                entity.HasIndex(e => e.PageInfototalResults);
+                entity.HasIndex(e => e.pageInfototalResults);
 
-                entity.Property(e => e.Kind)
-                    .HasColumnName("kind")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.kind).ValueGeneratedNever();
 
-                entity.Property(e => e.Etag).HasColumnName("etag");
-
-                entity.Property(e => e.PageInfototalResults).HasColumnName("pageInfototalResults");
-
-                entity.HasOne(d => d.PageInfototalResultsNavigation)
+                entity.HasOne(d => d.pageInfototalResultsNavigation)
                     .WithMany(p => p.VideoResults)
-                    .HasForeignKey(d => d.PageInfototalResults);
+                    .HasForeignKey(d => d.pageInfototalResults);
             });
 
-            modelBuilder.Entity<YoutubeVideoDetails>(entity =>
+            modelBuilder.Entity<YoutubeAPIViewModels>(entity =>
             {
-                entity.ToTable("YoutubeAPIViewModels");
-
                 entity.Property(e => e.Id).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<YoutubeResults>(entity =>
             {
-                entity.HasKey(e => e.Kind);
+                entity.HasKey(e => e.kind);
 
-                entity.HasIndex(e => e.PageInfototalResults);
+                entity.HasIndex(e => e.pageInfototalResults);
 
-                entity.Property(e => e.Kind)
-                    .HasColumnName("kind")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.kind).ValueGeneratedNever();
 
-                entity.Property(e => e.Etag).HasColumnName("etag");
-
-                entity.Property(e => e.NextPageToken).HasColumnName("nextPageToken");
-
-                entity.Property(e => e.PageInfototalResults).HasColumnName("pageInfototalResults");
-
-                entity.HasOne(d => d.PageInfototalResultsNavigation)
+                entity.HasOne(d => d.pageInfototalResultsNavigation)
                     .WithMany(p => p.YoutubeResults)
-                    .HasForeignKey(d => d.PageInfototalResults);
+                    .HasForeignKey(d => d.pageInfototalResults);
             });
         }
     }

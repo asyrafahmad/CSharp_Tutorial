@@ -29,13 +29,13 @@ namespace CSharp_CheatSheet.Helpers
                         foreach (var item in lsVids.Result.lsVideos)
                         {
                             //TODO: Insert each videos into db
-                            var video = new YoutubeVideoDetails()
+                            var video = new YoutubeApiViewModels()
                             {
                                 Id = item.Id,
                                 Description = item.Description,
                                 Title = item.Title
                             };
-                            db.YoutubeApiviewModels.Add(video);
+                            db.YoutubeApiViewModels.Add(video);
                         }
                         db.SaveChanges();
                     }

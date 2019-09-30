@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace CSharp_CheatSheet.Model
 {
-    public partial class ResultItems
+    public partial class resultItems
     {
-        public string Id { get; set; }
-        public string Kind { get; set; }
-        public string Etag { get; set; }
-        public string ContentDetailsvideoId { get; set; }
+        public string id { get; set; }
+        public string kind { get; set; }
+        public string etag { get; set; }
+        public string contentDetailsvideoId { get; set; }
 
-        public ContentDetails ContentDetailsvideo { get; set; }
-        public YoutubeResults KindNavigation { get; set; }
+        public contentDetails contentDetailsvideo { get; set; }
+        public YoutubeResults kindNavigation { get; set; }
     }
 }

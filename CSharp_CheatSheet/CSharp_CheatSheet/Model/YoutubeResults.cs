@@ -7,15 +7,15 @@ namespace CSharp_CheatSheet.Model
     {
         public YoutubeResults()
         {
-            ResultItems = new HashSet<ResultItems>();
+            resultItems = new HashSet<resultItems>();
         }
 
-        public string Kind { get; set; }
-        public string Etag { get; set; }
-        public string NextPageToken { get; set; }
-        public int? PageInfototalResults { get; set; }
+        public string kind { get; set; }
+        public string etag { get; set; }
+        public string nextPageToken { get; set; }
+        public int? pageInfototalResults { get; set; }
 
-        public PageInfo PageInfototalResultsNavigation { get; set; }
-        public ICollection<ResultItems> ResultItems { get; set; }
+        public pageInfo pageInfototalResultsNavigation { get; set; }
+        public ICollection<resultItems> resultItems { get; set; }
     }
 }

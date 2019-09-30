@@ -3,18 +3,17 @@ using System.Collections.Generic;
 
 namespace CSharp_CheatSheet.Model
 {
-    public partial class Snippet
+    public partial class snippet
     {
-        public Snippet()
+        public snippet()
         {
-            VideoItems = new HashSet<VideoItems>();
+            videoItems = new HashSet<videoItems>();
         }
 
-        public DateTime PublishedAt { get; set; }
-        public string ChannelId { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public DateTime publishedAt { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
 
-        public ICollection<VideoItems> VideoItems { get; set; }
+        public ICollection<videoItems> videoItems { get; set; }
     }
 }
