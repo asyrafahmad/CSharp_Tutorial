@@ -33,7 +33,7 @@ namespace CSharp_CheatSheet.Controllers
                     foreach (var item in result.items)
                     {
                         var vidRes = new VideoResult();
-                        var uri = $"https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id={item.contentDetails.videoId}&key=AIzaSyB7cEKc5O5lr9aF10Gr3ODo_AFbIGOjjHM";
+                        var uri = $"https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=50&playlistId=PLAC325451207E3105&key=AIzaSyB7cEKc5O5lr9aF10Gr3ODo_AFbIGOjjHM";
                         HttpResponseMessage resp = await client.GetAsync(uri);
                         if (response.IsSuccessStatusCode)
                         {
