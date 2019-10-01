@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CSharp_CheatSheet.Model
 {
-    public partial class YoutubeAPIViewModels
+    public partial class YoutubeApiViewModels
     {
         public string Id { get; set; }
         public string Title { get; set; }

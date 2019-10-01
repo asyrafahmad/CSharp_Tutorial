@@ -17,6 +17,7 @@ namespace CSharp_CheatSheet
 {
     public class Startup
     {
+        // dependency injection =  allow us to create system that are loosely coupled extensible and easily testable
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +26,7 @@ namespace CSharp_CheatSheet
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        // configure the services required for application
         //public void ConfigureServices(IServiceCollection services)
         //{
         //    services.Configure<CookiePolicyOptions>(options =>
@@ -37,10 +39,9 @@ namespace CSharp_CheatSheet
 
         //    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         //}
+
         public void ConfigureServices(IServiceCollection services)
-
         {
-
             services.AddMvc();
 
             services.AddDbContext<myWebAppContext>(options =>
@@ -51,6 +52,7 @@ namespace CSharp_CheatSheet
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // Configure application, request, processing, pipeline
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

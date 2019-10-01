@@ -21,7 +21,7 @@ namespace CSharp_CheatSheet.Model
         public virtual DbSet<snippet> snippet { get; set; }
         public virtual DbSet<videoItems> videoItems { get; set; }
         public virtual DbSet<VideoResults> VideoResults { get; set; }
-        public virtual DbSet<YoutubeAPIViewModels> YoutubeAPIViewModels { get; set; }
+        public virtual DbSet<YoutubeApiViewModels> YoutubeApiViewModels { get; set; }
         public virtual DbSet<YoutubeResults> YoutubeResults { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

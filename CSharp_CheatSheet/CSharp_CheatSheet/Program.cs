@@ -17,6 +17,9 @@ namespace CSharp_CheatSheet
             CreateWebHostBuilder(args).Build().Run();
         }
 
+        // setting up the web server
+        // loading the host and application configuration from various configuration sources
+        // configuring logging
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
