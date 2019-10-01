@@ -101,7 +101,7 @@ namespace CSharp_CheatSheet.Model
                     .HasForeignKey(d => d.pageInfototalResults);
             });
 
-            modelBuilder.Entity<YoutubeAPIViewModels>(entity =>
+            modelBuilder.Entity<YoutubeApiViewModels>(entity =>
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
             });
