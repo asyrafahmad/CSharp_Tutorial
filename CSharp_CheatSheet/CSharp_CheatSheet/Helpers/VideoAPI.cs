@@ -28,14 +28,23 @@ namespace CSharp_CheatSheet.Helpers
                     {
                         foreach (var item in lsVids.Result.lsVideos)
                         {
-                            //TODO: Insert each videos into db
-                            var video = new YoutubeApiViewModels()
+                            var video = db.YoutubeApiViewModels.Where(t => t.Id == item.Id).FirstOrDefault();
+                            if (video != null)
                             {
-                                Id = item.Id,
-                                Description = item.Description,
-                                Title = item.Title
-                            };
-                            db.YoutubeApiViewModels.Add(video);
+                                video.Title = item.Title;
+                                video.Description = item.Description;
+                            }
+                            else
+                            {
+                                //TODO: Insert each videos into db
+                                var newvideo = new YoutubeApiViewModels()
+                                {
+                                    Id = item.Id,
+                                    Description = item.Description,
+                                    Title = item.Title
+                                };
+                                db.YoutubeApiViewModels.Add(newvideo);
+                            }                            
                         }
                         db.SaveChanges();
                     }
@@ -47,7 +56,7 @@ namespace CSharp_CheatSheet.Helpers
             }
         }
 
-        private async Task<ListVideos> GetVidsAsync()
+        public async Task<ListVideos> GetVidsAsync()
         {
             var res = new ListVideos();
             var result = new YoutubeContent();
@@ -64,14 +73,14 @@ namespace CSharp_CheatSheet.Helpers
                         var vidRes = new VideoResult();
                         var uri = $"https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=50&playlistId=PLAC325451207E3105&key=AIzaSyB7cEKc5O5lr9aF10Gr3ODo_AFbIGOjjHM";
                         HttpResponseMessage resp = await client.GetAsync(uri);
-                        if (response.IsSuccessStatusCode)
+                        if (resp.IsSuccessStatusCode)
                         {
                             vidRes = await resp.Content.ReadAsAsync<VideoResult>();
                             var you = new YoutubeAPIViewModel
                             {
                                 Id = vidRes.items.FirstOrDefault().id,
-                                Title = vidRes.items.FirstOrDefault().snippet.title,
-                                Description = vidRes.items.FirstOrDefault().snippet.description,
+                                Title = vidRes.items.FirstOrDefault().snippet!=null? vidRes.items.FirstOrDefault().snippet.title:"",
+                                Description = vidRes.items.FirstOrDefault().snippet != null ? vidRes.items.FirstOrDefault().snippet.description :"",
                                 //Tumbnail = vidRes.items.FirstOrDefault().snippet.thumbnails.FirstOrDefault().medium.url
                             };
                             res.lsVideos.Add(you);

@@ -14,8 +14,12 @@
 
     <h3>@item.Title</h3>
 
+    @if (item.Description.Length > 0)
+    {
         @Html.Raw(item.Description.Substring(0, 100))
-            <a id="onClick">See More</a><p><a href="~/Tutorial/Introduction?v=@item.Id" class="btn btn-primary" role="button">Learn more</a><a href="#" class="btn btn-default" role="button">Add Favourite</a></p>
+
+    }
+    <a id="onClick">See More</a><p><a href="~/Tutorial/Introduction?v=@item.Id" class="btn btn-primary" role="button">Learn more</a><a href="#" class="btn btn-default" role="button">Add Favourite</a></p>
 </div>
         </div>
     </div>

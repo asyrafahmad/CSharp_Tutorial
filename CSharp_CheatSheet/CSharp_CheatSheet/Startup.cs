@@ -51,7 +51,7 @@ namespace CSharp_CheatSheet
             _video.Initialize();    //to call API just for once
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline. (each of the function which use IApplicationBuilder(app) is called MIDDLEWARE)
         // Configure application, request, processing, pipeline
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -65,6 +65,22 @@ namespace CSharp_CheatSheet
             }
 
             app.UseStaticFiles();
+
+            /*
+                // to use other static file name as default instead of using default.html
+                DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();       
+                defaultFilesOptions.DefaultFileNames.Clear();
+                defaultFilesOptions.DefaultFileNames.Add("foo.html");
+                app.UseDefaultFiles(defaultFilesOptions);
+            */
+
+            /* 
+                // to use that static files as default
+                app.UseDefaultFiles(); 
+            */
+
+
+            app.UseStaticFiles();   //use static file (wwwroot file)
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
