@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using CSharp_CheatSheet.Helpers;
 using CSharp_CheatSheet.Model;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace CSharp_CheatSheet
 {
@@ -49,6 +50,24 @@ namespace CSharp_CheatSheet
 
             var _video = new VideoAPI();
             _video.Initialize();    //to call API just for once
+
+            //HealthCheck
+            services.AddHealthChecksUI();           //register health check
+
+            services.AddHealthChecks()
+                .AddSqlServer(Configuration["Data:ConnectionStrings:Sql"])
+                .AddRedis(Configuration["Data:ConnectionStrings:Redis"]);
+
+            services.AddHealthChecks()
+                .AddSqlServer(
+            connectionString: Configuration["Data:ConnectionStrings:Sql"],
+            healthQuery: "SELECT 1;",
+            name: "sql",
+            failureStatus: HealthStatus.Degraded,
+            tags: new string[] { "db", "sql", "sqlserver" });
+
+         
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline. (each of the function which use IApplicationBuilder(app) is called MIDDLEWARE)
@@ -63,6 +82,7 @@ namespace CSharp_CheatSheet
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
 
             app.UseStaticFiles();
 
@@ -89,6 +109,28 @@ namespace CSharp_CheatSheet
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+
+            app.UseHealthChecksUI(o =>
+            {
+                o.UIPath = "/health-ui";
+            });
+
+
+
+            //app.UseRouting()
+            // .UseEndpoints(config =>
+            // {
+            //     config.MapHealthChecks("/healthz", new HealthCheckOptions
+            //     {
+            //         Predicate = _ => true,
+            //         ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            //     });
+            // });
+
+
+
         }
     }
 }

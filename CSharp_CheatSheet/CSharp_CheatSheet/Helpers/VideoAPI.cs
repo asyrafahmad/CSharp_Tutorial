@@ -44,7 +44,7 @@ namespace CSharp_CheatSheet.Helpers
                                     Title = item.Title
                                 };
                                 db.YoutubeApiViewModels.Add(newvideo);
-                            }                            
+                            }               
                         }
                         db.SaveChanges();
                     }
@@ -79,7 +79,7 @@ namespace CSharp_CheatSheet.Helpers
                             var you = new YoutubeAPIViewModel
                             {
                                 Id = vidRes.items.FirstOrDefault().id,
-                                Title = vidRes.items.FirstOrDefault().snippet!=null? vidRes.items.FirstOrDefault().snippet.title:"",
+                                Title = vidRes.items.FirstOrDefault().snippet != null ? vidRes.items.FirstOrDefault().snippet.title : "",
                                 Description = vidRes.items.FirstOrDefault().snippet != null ? vidRes.items.FirstOrDefault().snippet.description :"",
                                 //Tumbnail = vidRes.items.FirstOrDefault().snippet.thumbnails.FirstOrDefault().medium.url
                             };
